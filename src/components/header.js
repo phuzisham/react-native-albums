@@ -1,10 +1,35 @@
 // Import libraries for making a component
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 // Make component
 const Header = () => {
-  return <Text>Albums!</Text>;
+  const { textStyle, viewStyle } = Styles;
+
+  return (
+    <View style={viewStyle}>
+      <Text style={textStyle}>Albums!</Text>
+    </View>
+  );
+};
+
+// Style the component
+const Styles = {
+  viewStyle: {
+    backgroundColor: '#F8F8F8',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 60,
+    paddingTop: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 2,
+    position: 'relative'
+  },
+  textStyle: {
+    fontSize: 20
+  }
 };
 
 // Make component available to other parts of the app
